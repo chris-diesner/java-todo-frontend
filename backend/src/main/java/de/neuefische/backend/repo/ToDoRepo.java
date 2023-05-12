@@ -31,7 +31,7 @@ public class ToDoRepo {
             return toDoMap.get(id);
         }
         else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No Todo found with ID: " + id);
         }
     }
 
