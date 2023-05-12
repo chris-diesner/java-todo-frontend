@@ -15,5 +15,8 @@ export const getTodoById = (id:string) =>
 export const putTodo = (todo:ToDoType) =>
     axios.put(`/api/todo/${todo.id}`, todo)
 
+export const advanceTodo = (todo:ToDoType) =>
+    axios.put(`/api/todo/${todo.id}`, {status:"DOING"})
+
 export const deleteTodo = (id:string) =>
     axios.delete(`/api/todo/${id}`)
